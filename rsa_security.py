@@ -1,6 +1,6 @@
 import base64
 import random
-from Crypto.Cipher import AES  # pip install pycryptodome
+from Crypto.Cipher import AES
 
 
 def add_to_16(data: str) -> bytes:
@@ -44,7 +44,7 @@ def get_rand_num() -> str:
 
 
 if __name__ == '__main__':
-    data = '邹学超'
+    data = 'hello'
     iv = get_rand_num()
     text = encrypt_by_aes(data, iv)
     print(text)
