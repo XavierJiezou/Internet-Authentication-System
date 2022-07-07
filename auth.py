@@ -110,7 +110,12 @@ def auth(logfile: str = 'log.txt'):
             print('请先登录')
         else:
             with open(logfile, encoding='utf-8') as f:
-                data = eval(f.readlines()[-1])['data']
+                for line in f.readlines()[::-1]:
+                    if '登录成功' in line:
+                        data = eval(line)['data']
+                        break
+                    else:
+                        continue
             if 'logouttime' in data:
                 print('请先登录')
             else:
