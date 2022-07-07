@@ -8,7 +8,7 @@ from typing import Tuple, Dict, Any
 from loguru import logger
 
 
-class QiyuanInternetAuthenticationSystem:
+class InternetAuthenticationSystem:
 
     def __init__(self, username: str, password: str) -> None:
         self.username = username
